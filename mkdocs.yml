@@ -4,6 +4,10 @@ theme:
   name: material
 
   logo: assets/sol.png
+  favicon: assets/favicon.png
+
+  icon:
+    repo: fontawesome/brands/github
 
   features:
     - navigation.tabs
@@ -40,6 +44,7 @@ theme:
       accent: deep orange
 
 repo_url: https://github.com/Ale32bit/Solstice
+repo_name: Ale32bit/Solstice
 
 copyright: Copyright &copy; 2024 - AlexDevs
 
