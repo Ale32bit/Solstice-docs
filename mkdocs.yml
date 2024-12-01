@@ -1,0 +1,53 @@
+site_name: Solstice Essentials
+site_url: https://solstice.alexdevs.me
+theme:
+  name: material
+
+  logo: assets/sol.png
+
+  features:
+    - navigation.tabs
+
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+      primary: orange
+      accent: deep orange
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+      primary: orange
+      accent: deep orange
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+      primary: black
+      accent: deep orange
+
+repo_url: https://github.com/Ale32bit/Solstice
+
+copyright: Copyright &copy; 2024 - AlexDevs
+
+markdown_extensions:
+  - admonition
+  - md_in_html
+  - toc:
+      permalink: true
+  - tables
+
+plugins:
+  - search
