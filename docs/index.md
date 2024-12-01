@@ -1,4 +1,5 @@
 ---
+title: Home
 hide:
   - navigation
 ---
@@ -20,6 +21,24 @@ Solstice is a mod for Fabric servers that adds many essential commands and featu
 Solstice is available on...
 
 [Modrinth](https://modrinth.com/mod/solstice-essentials) & [CurseForge](https://www.curseforge.com/minecraft/mc-mods/solstice)!
+
+It is recommended to install [LuckPerms](https://modrinth.com/plugin/luckperms) along this mod.
+
+## For server owners
+
+The directory `config/solstice/` in the server folder contains the configuration of the mod.
+
+The file `solstice.conf` contains the configuration to customize the behaviour of Solstice.
+
+The file `locale.conf` contains the messages of commands and features, you can customize and translate commands from this file.
+
+The directory `info/` contains the info pages; if the directory does **not** exist, it will be created along 3 `.txt` files.
+
+- `motd.txt`: this file contains the message of the day. This file is read when joining the server or when `/motd` is ran.
+- `rules.txt`: this file contains the rules. This file is read when running `/rules`.
+- `formatting.txt`: this file contains an example of the formatting used by Solstice. You can safely delete this file.
+
+The files in `info/` support [Simplified Text Format](https://placeholders.pb4.eu/user/text-format/) and [Placeholders](https://placeholders.pb4.eu/user/default-placeholders/).
 
 ## Reporting issues
 
