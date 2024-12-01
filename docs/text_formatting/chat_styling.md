@@ -17,9 +17,13 @@ The advancement titles and descriptions are automatically translated to the clie
 
 - `${message}` - The message content.
 
+![Chat message](../assets/text_formatting/chat.webp)
+
 ## Death messages - `death-format`
 
 - `${message}` - The death message, it already contains the player name.
+
+![Death](../assets/text_formatting/death.png)
 
 ## Emote messages (`/me`) - `emote-format`
 

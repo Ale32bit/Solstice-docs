@@ -10,6 +10,8 @@ These options can be configured in the `chat` section of the config file.
 
 ## Markdown
 
+![Markdown](../assets/features/markdown.webp)
+
 ### Enable chat markdown - `enable-chat-markdown`
 
 Whether to enable Markdown in chat.

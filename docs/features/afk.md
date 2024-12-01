@@ -2,7 +2,7 @@
 
 The AFK (away-from-keyboard) module tracks players active time and automatically flags them as "AFK" after a configurable time span of inactivity.
 
-The placeholder `solstice:afk` displays 
+The placeholder `solstice:afk` displays an AFK tag.
 
 Activity is currently tracked by:
 
@@ -12,6 +12,8 @@ Activity is currently tracked by:
 - Item use events
 
 The `/afk` command manually triggers AFK.
+
+![AFK](../assets/features/afk.png)
 
 ## Configuring
 

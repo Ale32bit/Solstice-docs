@@ -6,6 +6,8 @@ A boss bar will be displayed 10 minutes before restart, counting down each secon
 
 Announcements will also be sent in chat, along an audible ping, at configured times to notify everyone.
 
+![Auto Restart](../assets/features/autorestart.webp)
+
 ## Configuring
 
 This module can be configured in the `auto-restart` section of the config file.

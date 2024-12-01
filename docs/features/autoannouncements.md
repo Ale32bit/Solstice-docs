@@ -4,6 +4,8 @@ The automatic announcements module, as the name suggests, automatically broadcas
 
 Single announcements can be configured to broadcast only to a subset of players that respect a configurable permission condition.
 
+![AutoAnnouncement](../assets/features/autoannouncement.png)
+
 ## Configuring
 
 AutoAnnouncements can be configured in the `auto-announcements` section in the config file.
