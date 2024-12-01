@@ -7,7 +7,8 @@ theme:
 
   features:
     - navigation.tabs
-
+    - navigation.path
+    - navigation.expand
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -48,6 +49,10 @@ markdown_extensions:
   - toc:
       permalink: true
   - tables
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences 
 
 plugins:
   - search
+  - privacy
