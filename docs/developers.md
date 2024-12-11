@@ -18,4 +18,4 @@ maven {
 modImplementation "me.alexdevs:solstice:VERSION"
 ```
 
-Replace `VERSION` with the preferred version. eg. `0.3.1-alpha` (without `v`).
+Replace `VERSION` with the preferred version. eg. `1.0.0+1.20.1` (without `v`).

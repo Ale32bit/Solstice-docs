@@ -68,3 +68,10 @@ plugins:
   - search
   - privacy
   - awesome-pages
+
+extra:
+  version:
+    provider: mike
+    default:
+      - stable
+    alias: true

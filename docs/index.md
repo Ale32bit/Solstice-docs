@@ -36,14 +36,6 @@ The file `solstice.conf` contains the configuration to customize the behaviour o
 
 The file `locale.conf` contains the messages of commands and features, you can customize and translate commands from this file.
 
-The directory `info/` contains the info pages; if the directory does **not** exist, it will be created along 3 `.txt` files.
-
-- `motd.txt`: this file contains the message of the day. This file is read when joining the server or when `/motd` is ran.
-- `rules.txt`: this file contains the rules. This file is read when running `/rules`.
-- `formatting.txt`: this file contains an example of the formatting used by Solstice. You can safely delete this file.
-
-The files in `info/` support [Simplified Text Format](https://placeholders.pb4.eu/user/text-format/) and [Placeholders](https://placeholders.pb4.eu/user/default-placeholders/).
-
 ## Reporting issues
 
 The issue tracker is available on the [GitHub repository](https://github.com/Ale32bit/Solstice/issues).

@@ -1,4 +1,12 @@
-# Player name formats
+# Custom Name
+
+The custom name modules brings customizable player display names and nicknames!
+
+With this module you can configure the player name based on the rank.
+
+## Configuration
+
+### Player name formats
 
 It is possible to customize how player names are displayed in the server based on the LuckPerms group of the player.
 
@@ -9,7 +17,7 @@ It is possible to customize how player names are displayed in the server based o
     - `default` - Used for everyone.
     - `operator` - Used by operators.
 
-## Configure player names
+#### Configure player names
 
 Display names are configurable in the `name-formats` list.
 
@@ -23,7 +31,7 @@ This list uses the order as priority of the group, first elements come before la
     - vip
     - default
 
-### Adding a format
+##### Adding a format
 
 To add a format for a group, add the following lines in the list (remember the order priority in the list):
 
@@ -34,6 +42,13 @@ To add a format for a group, add the following lines in the list (remember the o
 }
 ```
 
-#### Placeholder
+###### Placeholder
 
 Instead of using `%player:name%`, `${name}` is prefered because it respects the nickname of the player (if any).
+
+## Commands
+
+- `/nick clear` - Clear nickname
+- `/nick "<nickname>"` - Set nickname
+- `/nick <player> clear` - (`solstice.command.nick.others`) - Clear a player's nickname
+- `/nick <player> "<nickname>"` - (`solstice.command.nick.others`) - Set a player's nickname
