@@ -37,4 +37,11 @@ This tag is displayed with `solstice:afk` placeholder when the player is AFK.
 
 ## Commands
 
-- `/afk`
+!!! command "afk"
+
+    Set player state as AFK.
+
+    **Permissions**
+
+    * `solstice.afk.base` - Default: true<br>
+    Enable 

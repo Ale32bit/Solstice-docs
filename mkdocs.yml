@@ -75,3 +75,6 @@ extra:
     default:
       - stable
     alias: true
+
+extra_css:
+  - stylesheets/extra.css
