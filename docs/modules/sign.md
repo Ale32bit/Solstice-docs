@@ -1,4 +1,4 @@
-# Formattable Signs
+# Sign
 
 Signs can be formatted via the legacy formatting (`&0-9a-f`) by granting the `solstice.sign.format` permission node.
 

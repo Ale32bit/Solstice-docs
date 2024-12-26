@@ -10,19 +10,19 @@ Some messages may include a date, a time or both.
 
 You can use this [list of patterns](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#patterns) to customize the formats.
 
-#### Date format - `date-format`
+!!! config "date-format"
 
-- Metric: `dd/MM/yyyy`
-- USA: `MM-dd-yyyy`
+    - Metric: `dd/MM/yyyy`
+    - USA: `MM-dd-yyyy`
 
-#### Time format - `time-format`
+!!! config "time-format"
 
-- 24h: `HH:mm`
-- 12h: `hh:mm a`
+    - 24h: `HH:mm`
+    - 12h: `hh:mm a`
 
-#### Date & time format - `date-time-format`
+!!! config "date-time-format"
 
-*Combination of the above.*
+    *Combination of the above.*
 
 ### Links and URLs
 
@@ -30,17 +30,38 @@ You can customize how links are styled in chat.
 
 These formats apply to both the Markdown link style (`[label](url)`) and URLs (`https://example.com`).
 
-#### Link format - `link`
+!!! config "link"
 
-- `${label}` - Label of the link, will be URL if not in Markdown style.
-  
-#### Link hover format - `link-hover`
+    - `${label}` - Label of the link, will be URL if not in Markdown style.
 
-This format is displayed when hovering hover the link.
+!!! config "link-hover"
 
-- `${url}` - URL of the link.
+    This format is displayed when hovering hover the link.
+
+    - `${url}` - URL of the link.
 
 ## Commands
 
-- `/solstice`
-- `/soltice reload` - (`solstice.command.solstice.reload`) - Reload configuration and locale files.
+!!! command "solstice"
+
+    Show information about the plugin.
+
+    **Permissions**
+
+    * `solstice.core.base` - Default: true<br>
+
+!!! command "solstice reload"
+
+    Reload Solstice configuration and locale.
+
+    **Permissions**
+
+    * `solstice.core.reload` - Default: 3<br>
+
+!!! command "solstice debug gen-command-list"
+
+    Generate a list of all Solstice commands with permissions.
+
+    **Permissions**
+
+    * `solstice.core.debug` - Default: 4<br>

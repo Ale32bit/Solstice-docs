@@ -4,4 +4,11 @@ This module adds the `/back` command and tracks last positions before teleports 
 
 ## Commands
 
-- `/back` - Go back.
+!!! command "back"
+
+    Go to the previous location after teleporting.
+
+    **Permissions**
+
+    * `solstice.back.base` - Default: true<br>
+    Enable back command.

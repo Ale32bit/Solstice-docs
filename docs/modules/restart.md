@@ -1,4 +1,4 @@
-# AutoRestart
+# Restart
 
 The auto restart module automatically stops the server at exactly the time of day configured.
 
@@ -6,7 +6,7 @@ A boss bar will be displayed 10 minutes before restart, counting down each secon
 
 Announcements will also be sent in chat, along an audible ping, at configured times to notify everyone.
 
-![Auto Restart](../assets/features/autorestart.webp)
+![Restart](../assets/features/restart.webp)
 
 ## Configuring
 
@@ -67,8 +67,38 @@ This message is displayed in chat when a milestone (`restart-notifications`) is 
 This message is used as kick message.
 
 ## Commands
+!!! command "afk"
 
-- `/restart now`
-- `/restart schedule next`
-- `/restart schedule <seconds> [message]`
-- `/restart cancel`
+    Set player state as AFK.
+
+    **Permissions**
+
+    * `solstice.afk.base` - Default: t
+    Enable AFK feature for the player.
+
+!!! command "afk"
+
+    Set player state as AFK.
+
+    **Permissions**
+
+    * `solstice.afk.base` - Default: t
+    Enable AFK feature for the player.
+
+!!! command "afk"
+
+    Set player state as AFK.
+
+    **Permissions**
+
+    * `solstice.afk.base` - Default: t
+    Enable AFK feature for the player.
+
+!!! command "afk"
+
+    Set player state as AFK.
+
+    **Permissions**
+
+    * `solstice.afk.base` - Default: t
+    Enable AFK feature for the player.
