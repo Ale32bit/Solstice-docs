@@ -48,7 +48,50 @@ Instead of using `%player:name%`, `${name}` is prefered because it respects the 
 
 ## Commands
 
-- `/nick clear` - Clear nickname
-- `/nick "<nickname>"` - Set nickname
-- `/nick <player> clear` - (`solstice.command.nick.others`) - Clear a player's nickname
-- `/nick <player> "<nickname>"` - (`solstice.command.nick.others`) - Set a player's nickname
+!!! command "nickname &quot;&lt;nickname&gt;&quot;"
+
+    Set your nickname.
+
+    **Permissions**
+
+    * `solstice.customname.base` - Default: 2<br>
+
+    **Aliases**
+
+    * nick
+
+!!! command "nickname clear"
+
+    Clear your nickname
+
+    **Permissions**
+
+    * `solstice.customname.base` - Default: 2<br>
+
+    **Aliases**
+
+    * nick
+
+!!! command "nickname &lt;player&gt; &quot;&lt;nickname&gt;&quot;"
+
+    Set the nickname of a player.
+
+    **Permissions**
+
+    * `solstice.customname.others` - Default: 2<br>
+
+    **Aliases**
+
+    * nick
+
+!!! command "nickname &lt;player&gt; clear"
+
+    Clear a player nickname.
+
+    **Permissions**
+
+    * `solstice.customname.others` - Default: 2<br>
+
+    **Aliases**
+
+    * nick

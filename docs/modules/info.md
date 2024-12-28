@@ -12,23 +12,49 @@ The files in `info/` support [Simplified Text Format](https://placeholders.pb4.e
 
 ## Special pages
 
-### Message of the day
+!!! note "Message of the day"
 
-The MOTD is displayed to a player whenever joining the server and with the `/motd` command. Uses the `motd.txt` file.
+    The MOTD is displayed to a player whenever joining the server and with the `/motd` command. Uses the `motd.txt` file.
 
-### Rules
+!!! note "Rules"
 
-Rules are displayed with the `/rules` command. Uses the `rules.txt` file.
+    Rules are displayed with the `/rules` command. Uses the `rules.txt` file.
 
 ## Configuration
 
-### Enable MOTD - `enable-motd`
+!!! config "enable-motd"
 
-Whether to send the MOTD message when joining.
+    Whether to send the MOTD message when joining.
 
 ## Commands
 
-- `/info` - Get a list of pages.
-- `/info <page>` - Read page.
-- `/motd` - Read MOTD.
-- `/rules` - Read rules.
+!!! command "info [page]"
+
+    Read a page.
+
+    If the argument `page` is missing, you will get a list of available pages instead.
+
+    **Permissions**
+
+    * `solstice.info.base` - Default: true
+
+    **Aliases**
+
+    * pages
+
+!!! command "motd"
+
+    Read the MOTD page.
+
+    **Permissions**
+
+    * `solstice.info.motd` - Default: true
+
+!!! command "rules"
+
+    Read the rules page.
+
+    **Permissions**
+
+    * `solstice.info.rules` - Default: true
+

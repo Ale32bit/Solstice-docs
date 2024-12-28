@@ -8,85 +8,83 @@ hide:
 
 Here is a list of all the commands implemented by Solstice, along the permission node and aliases.
 
-!!! note
+Check out the [modules](./modules/index.md) for detailed information.
 
-    - Arguments surrounded by angle brackets (`<arg>`) are mandatory to supply.
-    - Arguments surrounded by square brackets (`[arg]`) are optional.
+> :octicons-info-24: This list is auto-generated and may lack some information.
 
-
-| Command                                                                  | Permission node                      | Description                                                                                       | Aliases              |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------------------- | -------------------- |
-| `/broadcast <message>`                                                   | `solstice.command.broadcast`         | Broadcast a message to all players.                                                               |                      |
-| `/restart schedule <seconds [message], next>`                            | `solstice.command.restart`           | Start a countdown to server restart. `next` schedules for the next configured restart.            |                      |
-| `/restart now`                                                           | `solstice.command.restart`           | Restart the server.                                                                               |                      |
-| `/restart cancel`                                                        | `solstice.command.restart`           | Cancel the scheduled restart.                                                                     |                      |
-| `/solstice`                                                              | `solstice.command.solstice`          | Display version of the mod.                                                                       |                      |
-| `/solstice reload`                                                       | `solstice.command.solstice.reload`   | Reload the mod configuration, useful for changes without needing to restart.                      |                      |
-| `/sudo <command>`                                                        | `solstice.command.sudo`              | Run a command as server.                                                                          |                      |
-| `/doas <player> <command>`                                               | `solstice.command.doas`              | Run a command as player.                                                                          |                      |
-| `/timebar start <seconds> <color> <style> <countdown> <label> <command>` | `solstice.command.timebar`           | Start boss bar that progresses (or counts down) and then run a command as the executer.           |                      |
-| `/timebar cancel <uuid>`                                                 | `solstice.command.timerbar`          | Cancel a timebar.                                                                                 |                      |
-| `/feed <players>`                                                        | `solstice.command.feed`              | Feed players to their max hunger and saturation.                                                  |                      |
-| `/heal <entities>`                                                       | `solstice.command.heal`              | Heal entities to their max health.                                                                |                      |
-| `/fly [player]`                                                          | `solstice.command.fly`               | Toggle creative flight.                                                                           |                      |
-| `/god [player]`                                                          | `solstice.command.god`               | Toggle invulnerability.                                                                           |                      |
-| `/nick <nickname>`                                                       | `solstice.command.nick`              | Set your nickname.                                                                                |                      |
-| `/nick clear`                                                            | `solstice.command.nick`              | Clear your nickname.                                                                              |                      |
-| `/nick <player> <nickname>`                                              | `solstice.command.nick.others`       | Set a player nickname.                                                                            |                      |
-| `/nick <player> clear`                                                   | `solstice.command.nick.others`       | Clear a player nickname.                                                                          |                      |
-| `/smite <target> [times]`                                                | `solstice.command.smite`             | Summon a lightning bolt on a target.                                                              |                      |
-| `/home [home]`                                                           | `solstice.command.home`              | Teleport to a home.                                                                               |                      |
-| `/homeother <player> [home]`                                             | `solstice.command.homeother`         | Teleport to a player's home.                                                                      |                      |
-| `/sethome [home] [force]`                                                | `solstice.command.sethome`           | Set a home. Will prompt if already existing.                                                      |                      |
-| `/delhome [home]`                                                        | `solstice.command.delhome`           | Delete a home.                                                                                    |                      |
-| `/homes`                                                                 | `solstice.command.homes`             | List all homes.                                                                                   |                      |
-| `/homes <player>`                                                        | `solstice.command.homes.other`       | List all homes of a player.                                                                       |                      |
-| `/afk`                                                                   | `solstice.command.afk`               | Go away from keyboard.                                                                            |                      |
-| `/info [page]`                                                           | `solstice.command.info`              | Read an info page.                                                                                |                      |
-| `/mail`                                                                  | `solstice.command.mail`              | List all mails in the inbox.                                                                      |                      |
-| `/mail send <recipient> <message>`                                       | `solstice.command.mail`              | Send a mail to a player.                                                                          |                      |
-| `/mail read <index>`                                                     | `solstice.command.mail`              | Read a mail from the inbox.                                                                       |                      |
-| `/mail delete <index>`                                                   | `solstice.command.mail`              | Delete a mail from the inbox.                                                                     |                      |
-| `/motd`                                                                  | `solstice.command.motd`              | Show the message of the day. This is an info page.                                                |                      |
-| `/near [range]`                                                          | `solstice.command.near`              | Get all players in the range.                                                                     |                      |
-| `/rules`                                                                 | `solstice.command.rules`             | Show the rules info page.                                                                         |                      |
-| `/seen`                                                                  | `solstice.command.seen`              | See first login and last logout of a player.                                                      |                      |
-| `/seen` (extended)                                                       | `solstice.command.seen.extended`     | Extends base `/seen` to display IP address and location in the server.                            |                      |
-| `/suicide`                                                               | `solstice.command.suicide`           | Insta-kill your player.                                                                           |                      |
-| `/ban <targets> [reason]`                                                | `solstice.command.ban`               | Permanently ban players.                                                                          |                      |
-| `/tempban <targets> <duration> [reason]`                                 | `solstice.command.tempban`           | Temporary ban players.                                                                            |                      |
-| `/unban <targets>`                                                       | `solstice.command.unban`             | Pardon and unban players.                                                                         | `/pardon`            |
-| `/kick <targets> [message]`                                              | `solstice.command.kick`              | Kick players out of the server.                                                                   |                      |
-| `/mute <players>`                                                        | `solstice.command.mute`              | Mute players, they will not be able to chat.                                                      |                      |
-| `/ignore <players>`                                                      | `solstice.command.ignore`            | Ignore a player. All their messages, DMs, TPAs, mails will be silently ignored.                   |                      |
-| `/ignorelist`                                                            | `solstice.command.ignorelist`        | Get a list of ignored players.                                                                    |                      |
-| `/spawn`                                                                 | `solstice.command.spawn`             | Teleport to the server spawn.                                                                     |                      |
-| `/spawn <players>`                                                       | `solstice.command.spawn.other`       | Teleport players to spawn.                                                                        |                      |
-| `/setspawn`                                                              | `solstice.command.setspawn`          | Set the server spawn. This command also sets the world spawn.                                     |                      |
-| `/delspawn`                                                              | `solstice.command.delspawn`          | Delete the server spawn. This will not delete the world spawn.                                    |                      |
-| `/back`                                                                  | `solstice.command.back`              | Teleport to the previous position before teleport.                                                |                      |
-| `/tpaccept [uuid]`                                                       | `solstice.command.tpaccept`          | Accept a teleport request.                                                                        | `/tpyes`             |
-| `/tpdeny [uuid]`                                                         | `solstice.command.tpdeny`            | Refuse a teleport request.                                                                        | `/tpno`, `/tprefuse` |
-| `/tpa <player>`                                                          | `solstice.command.tpa`               | Request to teleport to a player.                                                                  | `/tpask`             |
-| `/tpahere <player>`                                                      | `solstice.command.tpahere`           | Request a player to teleport to you.                                                              | `/tpaskhere`         |
-| `/tphere <targets>`                                                      | `solstice.command.tphere`            | Teleport targets to you.                                                                          |                      |
-| `/tpoffline <player>`                                                    | `solstice.command.tpoffline`         | Teleport to an offline player's last location.                                                    |                      |
-| `/tell <player> <message>`                                               | `solstice.command.tell`              | Send a direct message to a player.                                                                | `/msg`, `/w`, `/dm`  |
-| `/tell Server <message>`                                                 | `solstice.command.tell`              | Send a direct message to the server.                                                              | `/msg`, `/w`, `/dm`  |
-| `/reply <message>`                                                       | `solstice.command.reply`             | Reply to the latest direct message.                                                               | `/r`                 |
-| `/warps`                                                                 | `solstice.command.warps`             | Shows a list of all the available warp waypoints.                                                 |                      |
-| `/warp <name>`                                                           | `solstice.command.warp`              | Teleport to a warp waypoint.                                                                      |                      |
-| `/setwarp <name>`                                                        | `solstice.command.setwarp`           | Delete a warp waypoint.                                                                           |                      |
-| `/delwarp <name>`                                                        | `solstice.command.delwarp`           | Set a warp waypoint.                                                                              |                      |
-| `/anvil`                                                                 | `solstice.command.anvil`             | Open an anvil GUI.                                                                                |                      |
-| `/cartography`                                                           | `solstice.command.cartography`       | Open the cartography table GUI.                                                                   |                      |
-| `/enderchest`                                                            | `solstice.command.enderchest`        | Open your enderchest.                                                                             |                      |
-| `/enderchest <player>`                                                   | `solstice.command.enderchest.others` | Open a player's enderchest, unless the target has `solstice.command.enderchest.exempt`.           |                      |
-| `/grindstone`                                                            | `solstice.command.grindstone`        | Open the grindstone GUI.                                                                          |                      |
-| `/invsee <player>`                                                       | `solstice.command.invsee`            | Open a player's inventory, unless the target has the permission `solstice.command.invsee.exempt`. |                      |
-| `/loom`                                                                  | `solstice.command.loom`              | Open the loom GUI.                                                                                |                      |
-| `/smithing`                                                              | `solstice.command.smithing`          | Open the smithing table GUI.                                                                      |                      |
-| `/stonecutter`                                                           | `solstice.command.stonecutter`       | Open the stonecutter GUI.                                                                         |                      |
-| `/trash`                                                                 | `solstice.command.trash`             | Open an empty trash inventory when items get voided once closed.                                  |                      |
-| `/workbench`                                                             | `solstice.command.workbench`         | Open a crafting table GUI.                                                                        | `/craft`             |
-| `/hat`                                                                   | `solstice.command.hat`               | Place the item you are holding in the head slot.                                                  |                      |
+| Module          | Command        | Aliases              | Permission                     |
+|-----------------|----------------|----------------------|--------------------------------|
+| afk             | afk            | afk                  | solstice.afk.base              |
+| back            | back           | back                 | solstice.back.base             |
+| ban             | ban            | ban                  | solstice.ban.base              |
+| ban             | unban          | unban pardon         | solstice.ban.base              |
+| ban             | tempban        | tempban              | solstice.ban.tempban           |
+| broadcast       | broadcast      | broadcast bc         | solstice.broadcast.base        |
+| broadcast       | plainbroadcast | plainbroadcast pbc   | solstice.broadcast.plain       |
+| core            | solstice       | solstice sol         | solstice.core.debug            |
+| core            | solstice       | solstice sol         | solstice.core.base             |
+| core            | solstice       | solstice sol         | solstice.core.reload           |
+| customname      | nickname       | nickname nick        | solstice.customname.others     |
+| customname      | nickname       | nickname nick        | solstice.customname.base       |
+| enderchest      | enderchest     | enderchest           | solstice.enderchest.others     |
+| enderchest      | enderchest     | enderchest           | solstice.enderchest.base       |
+| extinguish      | extinguish     | extinguish ex        | solstice.extinguish.base       |
+| feed            | feed           | feed                 | solstice.feed.others           |
+| feed            | feed           | feed                 | solstice.feed.base             |
+| fly             | fly            | fly                  | solstice.fly.others            |
+| fly             | fly            | fly                  | solstice.fly.base              |
+| god             | god            | god                  | solstice.god.others            |
+| god             | god            | god                  | solstice.god.base              |
+| hat             | hat            | hat                  | solstice.hat.base              |
+| heal            | heal           | heal                 | solstice.heal.others           |
+| heal            | heal           | heal                 | solstice.heal.base             |
+| helpop          | helpop         | helpop sos           | solstice.helpop.base           |
+| home            | homeother      | homeother            | solstice.home.others           |
+| home            | delhome        | delhome              | solstice.home.base             |
+| home            | homes          | homes                | solstice.home.base             |
+| home            | sethome        | sethome              | solstice.home.base             |
+| home            | homes          | homes                | solstice.home.others           |
+| home            | home           | home                 | solstice.home.base             |
+| ignite          | ignite         | ignite               | solstice.ignite.base           |
+| ignore          | ignore         | ignore               | solstice.ignore.base           |
+| ignore          | ignorelist     | ignorelist           | solstice.ignore.base           |
+| info            | info           | info pages           | solstice.info.base             |
+| info            | motd           | motd                 | solstice.info.motd             |
+| info            | rules          | rules                | solstice.info.rules            |
+| inventorysee    | invsee         | invsee inventorysee  | solstice.inventorysee.base     |
+| kick            | kick           | kick                 | solstice.kick.base             |
+| mail            | mail           | mail                 | solstice.mail.base             |
+| mute            | mute           | mute                 | solstice.mute.base             |
+| mute            | unmute         | unmute               | solstice.mute.base             |
+| near            | near           | near                 | solstice.near.base             |
+| restart         | restart        | restart              | solstice.restart.base          |
+| seen            | seen           | seen playerinfo      | solstice.seen.base             |
+| smite           | smite          | smite                | solstice.smite.base            |
+| spawn           | setspawn       | setspawn             | solstice.spawn.set             |
+| spawn           | spawn          | spawn                | solstice.spawn.base            |
+| spawn           | spawn          | spawn                | solstice.spawn.others          |
+| spawn           | delspawn       | delspawn             | solstice.spawn.set             |
+| staffchat       | staffchat      | staffchat sc         | solstice.staffchat.base        |
+| sudo            | doas           | doas                 | solstice.sudo.doas             |
+| suicide         | suicide        | suicide              | solstice.suicide.base          |
+| teleporthere    | tphere         | tphere               | solstice.teleporthere.base     |
+| teleportoffline | tpoffline      | tpoffline tpoff      | solstice.teleportoffline.base  |
+| teleportrequest | tpa            | tpa tpask            | solstice.teleportrequest.ask   |
+| teleportrequest | tpahere        | tpahere tpaskhere    | solstice.teleportrequest.here  |
+| teleportrequest | tpdeny         | tpdeny tpno tprefuse | solstice.teleportrequest.base  |
+| teleportrequest | tpaccept       | tpaccept tpyes       | solstice.teleportrequest.base  |
+| tell            | reply          | reply r              | solstice.tell.base             |
+| tell            | tell           | tell msg w dm        | solstice.tell.base             |
+| timebar         | timebar        | timebar              | solstice.timebar.base          |
+| trash           | trash          | trash                | solstice.trash.base            |
+| utilities       | loom           | loom                 | solstice.utilities.loom        |
+| utilities       | anvil          | anvil                | solstice.utilities.anvil       |
+| utilities       | cartography    | cartography          | solstice.utilities.cartography |
+| utilities       | grindstone     | grindstone           | solstice.utilities.grindstone  |
+| utilities       | workbench      | workbench craft      | solstice.utilities.workbench   |
+| utilities       | smithing       | smithing             | solstice.utilities.smithing    |
+| utilities       | stonecutter    | stonecutter          | solstice.utilities.stonecutter |
+| warp            | warps          | warps                | solstice.warp.base             |
+| warp            | setwarp        | setwarp              | solstice.warp.set              |
+| warp            | warp           | warp                 | solstice.warp.base             |
+| warp            | delwarp        | delwarp              | solstice.warp.set              |

@@ -6,10 +6,19 @@ title: Introduction
 
 Modules bring functionalities and commands to Solstice.
 
-Each command added by a module has its own permission node, in the format of `solstice.command.mycommand`, some commands may have additional sub permission nodes, appended after the command name (e.g. `solstice.command.mycommand.subcommand`).
-
 Check out the left side bar for a list of documented modules.
 
-!!! note "Work In Progress"
+## Default permission values
 
-    This list is work in progress!
+All permissions hold a default value when the permission check returns a non-existant value (is not set).
+
+If the default value is `true`, the permission is granted to everyone, if it's `false` then the permission is denied by default to everyone.
+
+If the value is a number between 0 and 4 (included), it references the operator [permission level](https://minecraft.wiki/w/Permission_level), useful when **LuckPerms** is not installed.
+
+## Command arguments
+
+Many commands hold arguments in the format of &lt;arg&gt; and [arg].
+
+* `<arg>` - The argument is required.
+* `[arg]` - The argument is optional.

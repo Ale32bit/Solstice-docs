@@ -19,21 +19,24 @@ The `/afk` command manually triggers AFK.
 
 AFK can be configured in the `afk` section in the config file.
 
-### Enable AFK - `enable`
+!!! config "enable"
 
-Whether to enable the AFK module. This setting requires a server restart.
+    Whether to enable the AFK module. This setting requires a server restart.
+    
+    Use the `solstice.afk.base` permission node for fine tuning to specific users.
 
-### AFK time trigger - `time-trigger`
+!!! config "time-trigger"
 
-How many seconds the player has to be inactive to trigger the AFK.
+    How many seconds the player has to be inactive to trigger the AFK.
+    
 
-### Announce AFK - `announce`
+!!! config "announce"
 
-Whether to announce in chat a player has gone to or returned from AFK.
+    Whether to announce in chat a player has gone to or returned from AFK.
 
-### AFK Tag
+!!! config "tag"
 
-This tag is displayed with `solstice:afk` placeholder when the player is AFK.
+    This tag is displayed with `solstice:afk` placeholder when the player is AFK.
 
 ## Commands
 
@@ -44,4 +47,4 @@ This tag is displayed with `solstice:afk` placeholder when the player is AFK.
     **Permissions**
 
     * `solstice.afk.base` - Default: true<br>
-    Enable 
+    Enable AFK feature for the player.
