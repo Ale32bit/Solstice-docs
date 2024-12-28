@@ -20,6 +20,10 @@ The broadcast module configuration is under the `broadcast` section of the confi
 
     * `solstice.broadcast.base` - Default: 2
 
+    **Aliases**
+
+    * bc
+
 !!! command "plainbroadcast &lt;message&gt;"
 
     Broadcast a formattable message as-is, without using the `format` configuration.
@@ -28,3 +32,6 @@ The broadcast module configuration is under the `broadcast` section of the confi
 
     * `solstice.broadcast.plain` - Default: 2
 
+    **Aliases**
+
+    * pbc

@@ -1,7 +1,6 @@
 nav:
   - index.md
   - modules
-  - text_formatting
+  - textformatting.md
   - commands.md
   - developers.md
-  - Features (deprecated): features

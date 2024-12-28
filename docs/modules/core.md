@@ -50,6 +50,10 @@ These formats apply to both the Markdown link style (`[label](url)`) and URLs (`
 
     * `solstice.core.base` - Default: true<br>
 
+    **Aliases**
+
+    * sol
+
 !!! command "solstice reload"
 
     Reload Solstice configuration and locale.

@@ -4,87 +4,120 @@ This module adds chat formatting and limited toggleable Markdown formatting to p
 
 Also you can replace chunks of text with something else.
 
+Players with the `solstice.chat.advanced` permission node also unlock the full capabilities of the text formatting. See [Text Formatting](../textformatting.md).
+
 ## Configuring
 
-These options can be configured in the `chat` section of the config file.
+These options can be configured in the `styling` section of the config file.
 
-### Markdown
+!!! config "enable-markdown"
 
-![Markdown](../assets/features/markdown.webp)
+    Enable Markdown in chat.
 
-#### Enable chat markdown - `enable-chat-markdown`
+    **Format**
 
-Whether to enable Markdown in chat.
+    - **bold** `**bold**`
+    - *italic* `*italic*`
+    - <u>underline</u> `__underline__`
+    - ~~strikethrough~~ `~~strikethrough~~`
+    - [Links](https://example.com) `[URLs](https://example.com)` (it shows original URL when hovering over it)
+    - `quotes` `` `quotes` ``
+    - ||spoilers|| `||spoilers||` (it shows text when hovering over it)
 
-#### Format
+    ![Markdown](../assets/features/markdown.webp)
 
-The format allows:
+!!! config "welcome-new-players"
 
-- **bold** `**bold**`
-- *italic* `*italic*`
-- <u>underline</u> `__underline__`
-- ~~strikethrough~~ `~~strikethrough~~`
-- [Links](https://example.com) `[URLs](https://example.com)` (it shows original URL when hovering over it)
-- `quotes` `` `quotes` ``
-- ||spoilers|| `||spoilers||` (it shows text when hovering over it)
+    Send a welcome message to players joining the server for the first time.
 
-### Welcome new players - `welcomeNewPlayers`
+!!! config "replacements"
 
-Enabling this will broadcast a welcome message to everyone when a player joins the server for the first time.
+    Key-Value-Pair list of words to be replaced in chat.
 
-### Replacements - `replacements`
+    You can add a replacement by adding a line like this to the list:
 
-Chunks of texts can be replaced by configuring this key=value table.
+    ```hocon
+    "original"="replacement"
+    ```
 
-You can add a replacement by adding a line like this to the list:
+!!! info "Advancement configurations"
 
-```hocon
-"original"="replacement"
-```
+    There are 3 kinds of advancements, called frames: **task**, **challenge**, **goal**.
 
-## Locale
+    ![Advancements](../assets/text_formatting/advancements.png)
 
-## Advancements - `advancementTask`, `advancementChallenge`, `advancementGoal`
+    You can read more about them in the [Minecraft Wiki](https://minecraft.wiki/w/Advancement).
 
-There are 3 kinds of advancements, called frames: **task**, **challenge**, **goal**.
+    The advancement titles and descriptions are automatically translated to the client's locale.
 
-![Advancements](../assets/text_formatting/advancements.png)
+    !!! config "advancement-task"
 
-You can read more about them in the [Minecraft Wiki](https://minecraft.wiki/w/Advancement).
+        Format for task advancements.
 
-The advancement titles and descriptions are automatically translated to the client's locale.
+        **Placeholders**
 
-- `${title}` - Title of the advancement.
-- `${description}` - Description of the advancement.
+        * `${title}` - Title of the advancement.
+        * `${description}` - Description of the advancement.
 
-## Player chat messages - `chatFormat`
+    !!! config "advancement-challenge"
 
-- `${message}` - The message content.
+        Format for challenge advancements.
 
-![Chat message](../assets/text_formatting/chat.webp)
+        **Placeholders**
 
-## Death messages - `deathFormat`
+        - `${title}` - Title of the advancement.
+        - `${description}` - Description of the advancement.
 
-- `${message}` - The death message, it already contains the player name.
+    !!! config "advancement-goal"
 
-![Death](../assets/text_formatting/death.png)
+        Format for goal advancements.
 
-## Emote messages (`/me`) - `emoteFormat`
+        
+        **Placeholders**
 
-- `${message}` - The message content.
+        - `${title}` - Title of the advancement.
+        - `${description}` - Description of the advancement.
 
-## Join message - `joinFormat`
+!!! config "chat-format"
 
-- *No contextual placeholders*
+    Player chat format.
 
-## Join with a new username message - `joinRenamedFormat`
+    **Placeholders**
 
-- `${previousName}` - Previous name of the player.
+    * `${message}` - Message after formatting.
 
-## Leave format - `leaveFormat`
+    ![Chat message](../assets/text_formatting/chat.webp)
 
-- *No contextual placeholders*
-- 
-## Welcome - `welcome`
+!!! config "emote-format"
 
-- *No contextual placeholders*
+    Emote format (`/me`).
+
+!!! config "join-format"
+
+    Player join message format.
+
+!!! config "join-renamed-format"
+
+    Player join message after changing username.
+
+    **Placeholders**
+
+    * `${previousName}` - Previous name of the player.
+
+!!! config "leave-format"
+
+    Player leave message format.
+
+!!! config "death-format"
+
+    Player death message format.
+
+    **Placeholders**
+
+    * `${message}` - The death message, it already contains the player name.
+
+    ![Death](../assets/text_formatting/death.png)
+
+!!! config "welcome"
+
+    New player welcome message.

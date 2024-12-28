@@ -8,24 +8,38 @@ The header and footer of the player tab list can be customized with multiple lin
 
 The player tab list can be configured from the config file in the `tablist` section.
 
-### Enable tab list - `enable`
+!!! config "enable"
 
-Whether to enable the tab list customization.
+    Enable customizable player tab list.
 
-### Player display name in tab - `player-tab-name`
+!!! config "delay"
 
-Display name of the player to show in the tab list.
+    How many milliseconds to wait before updating the tab list.
 
-### Header & footer - `header` & `footer`
+    Defaults to `250` milliseconds.
 
-The header and footer are list of formattable text lines that take the placeholder context of the player.
+!!! config "phase-period"
 
-### Tab list delay - `delay`
+    It's an oscillating number (sin function).
 
-Milliseconds to wait for the next tab list update.
+    How fast the phase is. Lower = faster.
 
-### Phase period - `phase-period`
+    Defaults to `300`.
 
-It's an oscillating number (sin function).
+    !!! warning "WIP"
 
-For future uses.
+        This configuration is used for future purposes.
+
+!!! config "header"
+
+    The header lines of the tab list.
+    Each line represents a line of the header and the player placeholder context is applied.
+
+!!! config "footer"
+
+    The footer lines of the tab list.
+    Each line represents a line of the footer and the player placeholder context is applied.
+
+!!! config "player-tab-name"
+
+    Format to use when displaying the player name in the list.

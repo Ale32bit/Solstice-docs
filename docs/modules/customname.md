@@ -48,7 +48,7 @@ Instead of using `%player:name%`, `${name}` is prefered because it respects the 
 
 ## Commands
 
-!!! command "nick &quot;&lt;nickname&gt;&quot;"
+!!! command "nickname &quot;&lt;nickname&gt;&quot;"
 
     Set your nickname.
 
@@ -56,7 +56,11 @@ Instead of using `%player:name%`, `${name}` is prefered because it respects the 
 
     * `solstice.customname.base` - Default: 2<br>
 
-!!! command "nick clear"
+    **Aliases**
+
+    * nick
+
+!!! command "nickname clear"
 
     Clear your nickname
 
@@ -64,7 +68,11 @@ Instead of using `%player:name%`, `${name}` is prefered because it respects the 
 
     * `solstice.customname.base` - Default: 2<br>
 
-!!! command "nick &lt;player&gt; &quot;&lt;nickname&gt;&quot;"
+    **Aliases**
+
+    * nick
+
+!!! command "nickname &lt;player&gt; &quot;&lt;nickname&gt;&quot;"
 
     Set the nickname of a player.
 
@@ -72,10 +80,18 @@ Instead of using `%player:name%`, `${name}` is prefered because it respects the 
 
     * `solstice.customname.others` - Default: 2<br>
 
-!!! command "nick &lt;player&gt; clear"
+    **Aliases**
+
+    * nick
+
+!!! command "nickname &lt;player&gt; clear"
 
     Clear a player nickname.
 
     **Permissions**
 
     * `solstice.customname.others` - Default: 2<br>
+
+    **Aliases**
+
+    * nick
