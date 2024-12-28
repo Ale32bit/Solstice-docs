@@ -18,6 +18,7 @@ theme:
     - navigation.path
     - navigation.expand
     - navigation.instant
+    - navigation.top
     
   palette:
     # Palette toggle for automatic mode
@@ -52,7 +53,7 @@ theme:
 repo_url: https://github.com/Ale32bit/Solstice
 repo_name: Ale32bit/Solstice
 
-copyright: Copyright &copy; 2024 - AlexDevs
+copyright: Solstice &copy; 2024 - <a href="https://alexdevs.me">AlexDevs</a>
 
 markdown_extensions:
   - admonition
@@ -68,6 +69,10 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
   - search
