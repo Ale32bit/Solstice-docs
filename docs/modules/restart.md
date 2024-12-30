@@ -8,97 +8,126 @@ Announcements will also be sent in chat, along an audible ping, at configured ti
 
 ![Restart](../assets/features/restart.webp)
 
-## Configuring
+## Configuration
 
-This module can be configured in the `auto-estart` section of the config file.
+This module can be configured in the `restart` section of the config file.
 
-### Enable Auto Restart - `enable`
+!!! config "enable"
 
-Whether to enable the auto restart module.
+    Whether to enable the auto restart module.
 
-### Restart At - `restart-at`
+!!! config "restart-at"
 
-List of times to restart at, in 24h format (`"00:00"`, `"12:00"`, `"18:00"`), local to the server.
+    List of times to restart at, in 24h format (`"00:00"`, `"12:00"`, `"18:00"`), local to the server.
 
-The module will restart the server at exactly the configured time.
+    The module will restart the server at exactly the configured time.
 
-### Restart notification milestones - `restart-notifications`
+!!! config "restart-notifications"
 
-This list contains the milestones in seconds for chat announcements.
+    This list contains the milestones in seconds for chat announcements.
 
-!!! example
+    !!! example
 
-    If the list contains the number `300` (5 minutes), the restart announcement will sent in chat when the remaining time is 5 minutes.
+        If the list contains the number `300` (5 minutes), the restart announcement will be sent in chat when the remaining time is 5 minutes.
 
-### Restart sound - `restart-sound`
+    The highest value in this setting defines when the restart countdown bar has to show up.
 
-This sound is played to all players when a restart announcement is sent in chat.
+!!! config "restart-sound"
 
-### Restart sound pitch - `restart-sound-pitch`
+    This sound is played to all players when a restart announcement is sent in chat.
 
-This value defines the pitch of the `restart-sound` sound.
+!!! config "restart-sound-pitch"
+
+    This value defines the pitch of the `restart-sound` sound.
+
+!!! config "bar-style"
+
+    Style of the boss bar.
+
+    **Possible values**
+
+    * PROGRESS
+    * NOTCHED_6
+    * NOTCHED_10
+    * NOTCHED_12
+    * NOTCHED_20
+
+    ![List of styles](../assets/features/bossbar_styles.png)
+
+!!! config "bar-color"
+
+    Color of the boss bar.
+
+    **Possible values**
+
+    * PINK
+    * BLUE
+    * RED
+    * GREEN
+    * YELLOW
+    * PURPLE
+    * WHITE
+
+    ![List of colors](../assets/features/bossbar_colors.png)
 
 ## Locale
 
-### Restart bar label - `barLabel`
+!!! locale "barLabel"
 
-This text will be displayed on top of the boss bar countdown.
+    This text will be displayed on top of the boss bar countdown.
 
-The label updates every second.
+    The label updates every second.
 
-#### Placeholders
+    **Placeholders**
 
-- `${remaining_time}` - Time remaining.
-- `${elapsed_time}` - Time elapsed.
-- `${total_time}` - Total time of the countdown.
+    - `${remaining_time}` - Time remaining.
+    - `${elapsed_time}` - Time elapsed.
+    - `${total_time}` - Total time of the countdown.
 
-### Restart chat message - `chatMessage`
+!!! locale "chatMessage"
 
-This message is displayed in chat when a milestone (`restart-notifications`) is hit.
+    This message is displayed in chat when a milestone (`restart-notifications`) is hit.
 
-#### Placeholders
+    **Placeholders**
 
-- `${remaining_time}` - Time remaining.
-- `${elapsed_time}` - Time elapsed.
-- `${total_time}` - Total time of the countdown.
+    - `${remaining_time}` - Time remaining.
+    - `${elapsed_time}` - Time elapsed.
+    - `${total_time}` - Total time of the countdown.
 
-### Restart Kick Message - `restart-kick-message`
+!!! locale "kickMessage"
 
-This message is used as kick message.
+    This message is used as kick message.
 
 ## Commands
-!!! command "afk"
 
-    Set player state as AFK.
+!!! command "restart now"
 
-    **Permissions**
-
-    * `solstice.afk.base` - Default: t
-    Enable AFK feature for the player.
-
-!!! command "afk"
-
-    Set player state as AFK.
+    Restart the server.
 
     **Permissions**
 
-    * `solstice.afk.base` - Default: t
-    Enable AFK feature for the player.
+    * `solstice.restart.base` - Default: 4
 
-!!! command "afk"
+!!! command "restart schedule next"
 
-    Set player state as AFK.
-
-    **Permissions**
-
-    * `solstice.afk.base` - Default: t
-    Enable AFK feature for the player.
-
-!!! command "afk"
-
-    Set player state as AFK.
+    Schedule the next configured restart (if canceled).
 
     **Permissions**
 
-    * `solstice.afk.base` - Default: t
-    Enable AFK feature for the player.
+    * `solstice.restart.base` - Default: 4
+
+!!! command "restart schedule &lt;timespan&gt; [message]"
+
+    Start a manual restart countdown.
+
+    **Permissions**
+
+    * `solstice.restart.base` - Default: 4
+
+!!! command "restart cancel"
+
+    Cancel the running/scheduled restart.
+
+    **Permissions**
+
+    * `solstice.restart.base` - Default: 4

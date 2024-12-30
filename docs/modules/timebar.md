@@ -28,3 +28,13 @@ This module is mainly used internally (specifically for the restart boss bar), b
     **Permissions**
 
     * `solstice.timebar.base` - Default: 3
+
+## Options
+
+### Color
+
+![List of colors](../assets/features/bossbar_colors.png)
+
+### Styles
+
+![List of styles](../assets/features/bossbar_styles.png)
