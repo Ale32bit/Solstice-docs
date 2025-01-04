@@ -53,6 +53,8 @@ Check out the [modules](./modules/index.md) for detailed information.
 | info            | rules          | rules                | solstice.info.rules            |
 | inventorysee    | invsee         | invsee inventorysee  | solstice.inventorysee.base     |
 | kick            | kick           | kick                 | solstice.kick.base             |
+| kit             | kit            | kit                  | solstice.kit.set               |
+| kit             | kit            | kit                  | solstice.kit.base              |
 | mail            | mail           | mail                 | solstice.mail.base             |
 | mute            | mute           | mute                 | solstice.mute.base             |
 | mute            | unmute         | unmute               | solstice.mute.base             |
