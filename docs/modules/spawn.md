@@ -8,9 +8,9 @@ A first spawn point can be set for new players joining the server for the first 
 
 !!! config "require-world-permission"
 
-    Require that the player has the permission of the world 'solstice.spawn.worlds.<worldName>' to warp to its spawn from another world.
-    
-    Mind that 'solstice.spawn.worlds.base' is required to warp in other worlds in the first place.
+    Require that the player has the permission of the world 'solstice.spawn.worlds.<worldName>' to warp to its spawn, even if the player is in the same world.
+
+    Mind that 'solstice.spawn.worlds.base' is required to be able to use the `world` argument.
 
 ### global-spawn
 
@@ -50,8 +50,8 @@ This section defines whether `/spawn` and respawning work on a per world or glob
     **Permissions**
 
     * `solstice.spawn.base` - Default: true
-    * `solstice.spawn.worlds.<worldName>` - Default: *See `require-world-permission` setting.*<br>Allow warping to a specific world's spawn point.
-    * `solstice.spawn.others` - Default: 2
+    * `solstice.spawn.worlds.<worldName>` - Default: 2<br>See `require-world-permission` setting.
+    * `solstice.spawn.others` - Default: 2<br>Allow teleporting other players to spawn.
 
 !!! command "setspawn"
 

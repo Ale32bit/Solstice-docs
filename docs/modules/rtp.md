@@ -28,6 +28,10 @@ This module adds the `/rtp` command to randomly warp to a location of the world.
 
     List of biomes an attempt should fail at.
 
+!!! config "require-world-permission"
+
+    Require that the player has the permission of the world `solstice.rtp.worlds.<worldName>` to initiate the random teleport in the world.
+
 ### Cooldown
 
 !!! config "enable"
@@ -47,3 +51,8 @@ This module adds the `/rtp` command to randomly warp to a location of the world.
 !!! command "rtp"
 
     Warp to a random location of the world.
+
+    **Permissions**
+
+    * `solstice.rtp.base` - Default: 2
+    * `solstice.rtp.worlds.<worldName>` - Default: 2<br>See `require-world-permission` setting.
