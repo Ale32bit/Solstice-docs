@@ -1,16 +1,57 @@
 # Spawn
 
-This module allows you to set a server spawn point reachable by the `/spawn` command.
+This module allows you to configure spawn points in the server.
+
+A first spawn point can be set for new players joining the server for the first time.
+
+## Configuration
+
+!!! config "require-world-permission"
+
+    Require that the player has the permission of the world 'solstice.spawn.worlds.<worldName>' to warp to its spawn from another world.
+    
+    Mind that 'solstice.spawn.worlds.base' is required to warp in other worlds in the first place.
+
+### global-spawn
+
+This section defines whether `/spawn` and respawning work on a per world or global server basis.
+    
+
+!!! config "on-spawn-command"
+
+    Send the player to the global spawn instead of the world spawn when using the /spawn command.
+
+!!! config "on-respawn"
+
+    Send the player to the global spawn instead of their bed or anchor when respawning.
+
+!!! config "on-login"
+
+    Send the player to the global spawn when logging in.
+
+!!! config "target-spawn-world"
+
+    ID of the world to use as global spawn.
+    
+    Minecraft dimensions: 'minecraft:overworld', 'minecraft:the_nether', 'minecraft:the_end'.
 
 ## Commands
 
-!!! command "spawn"
+!!! command "spawn [world] [players]"
 
-    Go to spawn.
+    Warp to the world spawn point.
+    
+    If `global-spawn` > `on-spawn-command` is enabled, it will teleport to the configured world's spawn point.
+
+    If the argument `world` is defined it will teleport to the `world`'s spawn point.
+
+    If the argument `players` is defined it will teleport all targets to the `world`'s spawn point.
 
     **Permissions**
 
     * `solstice.spawn.base` - Default: true
+    * `solstice.spawn.worlds.<worldName>` - Default: *See `require-world-permission` setting.*<br>Allow warping to a specific world's spawn point.
+    * `solstice.spawn.others` - Default: 2
 
 !!! command "setspawn"
 
@@ -22,12 +63,18 @@ This module allows you to set a server spawn point reachable by the `/spawn` com
 
     * `solstice.spawn.set` - Default: 3
 
-!!! command "delspawn"
+!!! command "firstspawn"
 
-    Delete the spawn.
-
-    This command does not reset the vanilla world spawnpoint.
+    Warp to the first spawn point if available.
 
     **Permissions**
 
-    * `solstice.spawn.set` - Default: 3
+    * `solstice.spawn.firstspawn` - Default: true
+
+!!! command "setfirstspawn [delete]"
+
+    Set or delete the first spawn point.
+
+    **Permissions**
+
+    * `solstice.spawn.firstspawn.set` - Default: 2

@@ -19,3 +19,7 @@ The EnderChest module adds the `/enderchest` command to open your EnderChest (or
     **Permissions**
 
     * `solstice.enderchest.others` - Default: 2
+
+    **Aliases**
+
+    * ec

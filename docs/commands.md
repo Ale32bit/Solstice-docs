@@ -13,7 +13,7 @@ Check out the [modules](./modules/index.md) for detailed information.
 > :octicons-info-24: This list is auto-generated and may lack some information.
 
 | Module          | Command        | Aliases              | Permission                     |
-|-----------------|----------------|----------------------|--------------------------------|
+| --------------- | -------------- | -------------------- | ------------------------------ |
 | afk             | afk            | afk                  | solstice.afk.base              |
 | back            | back           | back                 | solstice.back.base             |
 | ban             | ban            | ban                  | solstice.ban.base              |
@@ -26,8 +26,8 @@ Check out the [modules](./modules/index.md) for detailed information.
 | core            | solstice       | solstice sol         | solstice.core.reload           |
 | customname      | nickname       | nickname nick        | solstice.customname.others     |
 | customname      | nickname       | nickname nick        | solstice.customname.base       |
-| enderchest      | enderchest     | enderchest           | solstice.enderchest.others     |
-| enderchest      | enderchest     | enderchest           | solstice.enderchest.base       |
+| enderchest      | enderchest     | enderchest ec        | solstice.enderchest.others     |
+| enderchest      | enderchest     | enderchest ec        | solstice.enderchest.base       |
 | extinguish      | extinguish     | extinguish ex        | solstice.extinguish.base       |
 | feed            | feed           | feed                 | solstice.feed.others           |
 | feed            | feed           | feed                 | solstice.feed.base             |
@@ -58,12 +58,15 @@ Check out the [modules](./modules/index.md) for detailed information.
 | mute            | unmute         | unmute               | solstice.mute.base             |
 | near            | near           | near                 | solstice.near.base             |
 | restart         | restart        | restart              | solstice.restart.base          |
+| rtp             | rtp            | rtp                  | solstice.rtp.base              |
 | seen            | seen           | seen playerinfo      | solstice.seen.base             |
 | smite           | smite          | smite                | solstice.smite.base            |
+| spawn           | firstspawn     | firstspawn           | solstice.spawn.firstspawn      |
+| spawn           | setfirstspawn  | setfirstspawn        | solstice.spawn.firstspawn.set  |
 | spawn           | setspawn       | setspawn             | solstice.spawn.set             |
+| spawn           | spawn          | spawn                | solstice.spawn.worlds.base     |
 | spawn           | spawn          | spawn                | solstice.spawn.base            |
 | spawn           | spawn          | spawn                | solstice.spawn.others          |
-| spawn           | delspawn       | delspawn             | solstice.spawn.set             |
 | staffchat       | staffchat      | staffchat sc         | solstice.staffchat.base        |
 | sudo            | doas           | doas                 | solstice.sudo.doas             |
 | suicide         | suicide        | suicide              | solstice.suicide.base          |
