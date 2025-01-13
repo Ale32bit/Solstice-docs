@@ -10,6 +10,16 @@ This module adds kits.
 
 ## Commands
 
+!!! command "kits"
+
+    Open a GUI where the player can claim the kit.
+
+    It can show up to 54 kits for technical reasons.
+
+    **Permissions**
+
+    * `solstice.kit.base` - Default: true
+
 !!! command "kit"
 
     Base of the command.
@@ -85,6 +95,14 @@ This module adds kits.
     Toggle flag to make it so players can only claim the kit once.
 
     `first-join` automatically flags the kit as claimed.
+
+    **Permissions**
+
+    * `solstice.kit.set` - Default: 3
+
+!!! command "kit set &lt;name&gt; icon"
+
+    Set the icon of the kit to the item you are currently holding.
 
     **Permissions**
 

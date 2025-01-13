@@ -68,4 +68,28 @@ These formats apply to both the Markdown link style (`[label](url)`) and URLs (`
 
     **Permissions**
 
-    * `solstice.core.debug` - Default: 4<br>
+    * `solstice.core.debug` - Default: 4
+
+!!! command "solstice debug tags"
+
+    Get a tag list of the item you are holding.
+
+    **Permissions**
+
+    * `solstice.core.debug` - Default: 4
+
+!!! command "serverstat"
+
+    !!! info inline end "Also check out [Spark](https://spark.lucko.me/) for better statistics!"
+
+    Get statistics of the server such as:
+
+    * Current TPS
+    * Uptime
+    * Total memory
+    * Allocated memory
+    * Free memory
+
+    **Permissions**
+
+    * `solstice.core.serverstat` - Default: 3
