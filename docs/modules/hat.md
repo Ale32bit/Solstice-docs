@@ -6,9 +6,13 @@ The hat module adds the `/hat` command, it makes you wear on your head the block
 
 !!! config "filter"
 
+    !!! info inline end "Tags"
+
+        Check out the command `/solstice debug tags` to get a list of tags for an item.
+
     List of item IDs and tags that used to filter the item that the player wants to use as hat.
 
-    Check the `whitelist-filter` configuration.
+    Check the `whitelist-filter` configuration to configure the behaviour.
 
 !!! config "whitelist-filter"
 
