@@ -40,6 +40,10 @@ The file `locale.conf` contains the messages of commands and features, you can c
 
 The issue tracker is available on the [GitHub repository](https://github.com/Ale32bit/Solstice/issues).
 
+## Discord
+
+[![Join the Discord server](https://discord.com/api/guilds/387712125210198016/widget.png?style=banner2)](https://discord.gg/PYzP4XjzH4)
+
 ## How to contribute
 
 Solstice is open-source! You can contribute from the GitHub repo [Ale32bit/Solstice](https://github.com/Ale32bit/Solstice).

@@ -85,6 +85,9 @@ extra:
     default:
       - stable
     alias: true
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/PYzP4XjzH4
 
 extra_css:
   - stylesheets/extra.css
