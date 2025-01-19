@@ -19,8 +19,6 @@ theme:
     - navigation.expand
     - navigation.instant
     - navigation.top
-
-  custom_dir: overrides
     
   palette:
     # Palette toggle for automatic mode
