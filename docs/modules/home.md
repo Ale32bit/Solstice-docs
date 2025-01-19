@@ -4,11 +4,11 @@ The home module brings player home waypoints.
 
 ## Configuration
 
-!!! config "maxHomes"
+!!! config "homes"
 
-    Maximum amount of homes a player can have.
+    The amount of homes a player can set based on their permission group. `groupName=homesLimit`.
 
-    Set to `-1` to disable this limit.
+    Use the permission node `solstice.home.unlimited` to bypass this limit.
 
 ## Commands
 
