@@ -48,3 +48,30 @@ AFK can be configured in the `afk` section in the config file.
 
     * `solstice.afk.base` - Default: true<br>
     Enable AFK feature for the player.
+
+
+!!! warning "Permissions for commands below subject to changes."
+
+!!! command "activetime"
+
+    View your active time.
+
+    **Permissions**
+
+    * `solstice.afk.base` - Default: true
+
+!!! command "activetime player &lt;player&gt;"
+
+    View a player's active time.
+
+    **Permissions**
+
+    * `solstice.afk.others` - Default: 1
+
+!!! command "activetime leaderboard"
+
+    View a top 10 leaderboard of most active players.
+
+    **Permissions**
+
+    * `solstice.afk.leaderboard` - Default: true
