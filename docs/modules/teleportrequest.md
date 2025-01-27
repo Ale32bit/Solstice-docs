@@ -38,11 +38,11 @@ Players can ask other players to teleport to or be teleported to.
 
     * tpaskhere
 
-!!! command "tpaccept [uuid]"
+!!! command "tpaccept [player]"
 
     Accept a teleport request.
 
-    The argument `uuid` links to the teleport request ID, lack of it references the last received request.
+    Lack of argument `player` will accept the last received request.
 
     **Permissions**
 
@@ -52,11 +52,11 @@ Players can ask other players to teleport to or be teleported to.
 
     * tpyes
 
-!!! command "tpdeny [uuid]"
+!!! command "tpdeny [player]"
 
     Deny a teleport request.
 
-    The argument `uuid` links to the teleport request ID, lack of it references the last received request.
+    Lack of argument `player` will refuse the last received request.
 
     **Permissions**
 

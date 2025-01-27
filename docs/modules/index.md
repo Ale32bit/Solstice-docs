@@ -8,6 +8,16 @@ Modules bring functionalities and commands to Solstice.
 
 Check out the left side bar for a list of documented modules.
 
+## Enable & Disable
+
+!!! warning inline end "Changing these setting requires restarting the server!"
+
+Most, if not all, modules can be disabled by updating the file `config/solstice/modules.conf`, setting the value to `true` will enable the module (default), otherwise use `false`.
+
+Disabling modules help choosing what features of Solstice to use and resolves compatibility issues with other mods that implement the same functionality.
+
+Some modules depend on other modules and will be disabled as well.
+
 ## Default permission values
 
 All permissions hold a default value when the permission check returns a non-existant value (is not set).
