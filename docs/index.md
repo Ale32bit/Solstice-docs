@@ -36,6 +36,8 @@ The file `solstice.conf` contains the configuration to customize the behaviour o
 
 The file `locale.conf` contains the messages of commands and features, you can customize and translate commands from this file.
 
+The file `modules.conf` contains the key-value pairs of modules that can be disabled. Restart the server to apply.
+
 ## Reporting issues
 
 The issue tracker is available on the [GitHub repository](https://github.com/Ale32bit/Solstice/issues).
