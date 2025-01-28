@@ -82,12 +82,16 @@ package com.example.modules.mymodule;
 import me.alexdevs.solstice.Solstice;
 import me.alexdevs.solstice.api.module.ModuleBase;
 
+// Use ModuleBase.Toggleable to make it toggleable from modules.conf.
 public class MyModule extends ModuleBase {
     public static final String ID = "mymodule";
 
     public MyModule() {
         super(ID);
+    }
 
+    @Override
+    public void init() {
         // Register the configuration section
         Solstice.configManager.registerData(ID, MyModuleConfig.class, MyModuleConfig::new);
 
