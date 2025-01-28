@@ -19,7 +19,7 @@ This tag improves upon Placeholder's gradient tags to fix its issues and impleme
 
 The tag accepts any amount of colors in its arguments and the phase argument, a decimal number between -1.0 and 1.0, can be used to shift the gradient around.
 
-* `<phase_gradient:[colors 1]:[color 2]:...:[phase]>`
+* `#!xml <phase_gradient:[colors 1]:[color 2]:...:[phase]>`
 
 This tag can be used from its aliases `<pgr>` and `<sgr>`.
 
