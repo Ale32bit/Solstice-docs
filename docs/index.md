@@ -20,9 +20,8 @@ Solstice is a mod for Fabric servers that adds many essential commands and featu
 
 ## Download & install
 
-Solstice is available on...
-
-[Modrinth](https://modrinth.com/mod/solstice-essentials) & [CurseForge](https://www.curseforge.com/minecraft/mc-mods/solstice)!
+[![](assets/buttons/modrinth.svg)](https://modrinth.com/mod/solstice-essentials)
+[![](assets/buttons/curseforge.svg)](https://www.curseforge.com/minecraft/mc-mods/solstice)
 
 It is recommended to install [LuckPerms](https://modrinth.com/plugin/luckperms) along this mod.
 
@@ -53,3 +52,6 @@ The issue tracker is available on the [GitHub repository](https://github.com/Ale
 Solstice is open-source! You can contribute from the GitHub repo [Ale32bit/Solstice](https://github.com/Ale32bit/Solstice).
 
 This documentation is also open-source! You can find me in the GitHub repo [Ale32bit/Solstice-Docs](https://github.com/Ale32bit/Solstice-Docs)!
+
+## Donate!
+
