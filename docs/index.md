@@ -55,3 +55,5 @@ This documentation is also open-source! You can find me in the GitHub repo [Ale3
 
 ## Donate!
 
+[![Support me through GitHub Sponsors](assets/buttons/ghsponsors.svg)](https://github.com/sponsors/Ale32bit/)
+[![Support me on Ko-fi](assets/buttons/kofi.svg)](https://ko-fi.com/alexdevs)

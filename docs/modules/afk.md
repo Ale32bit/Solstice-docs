@@ -38,6 +38,48 @@ AFK can be configured in the `afk` section in the config file.
 
     This tag is displayed with `solstice:afk` placeholder when the player is AFK.
 
+### triggers
+
+!!! config "on-movement"
+
+    Trigger on player movement.
+
+!!! config "on-look-change"
+
+    Trigger on player changing head direction (yaw, pitch).
+
+!!! config "on-chat"
+
+    Trigger on chat messages (or attempt of).
+
+!!! config "on-command"
+
+    Trigger on command (or attempt of).
+
+!!! warning "Fake players"
+
+    The following events may be triggered by fake players, preventing the player from going AFK automatically.
+
+!!! config "on-block-attack"
+
+    Trigger on attack on block (dig, left click) event.
+
+!!! config "on-block-interact"
+
+    Trigger on interaction with block (place, right click) event.
+
+!!! config "on-entity-attack"
+
+    Trigger on attack on entity event.
+
+!!! config "on-entity-interact"
+
+    Trigger on interact with entity event.
+
+!!! config "on-item-use"
+
+    Trigger on item use event.
+
 ## Commands
 
 !!! command "afk"
@@ -75,3 +117,13 @@ AFK can be configured in the `afk` section in the config file.
     **Permissions**
 
     * `solstice.afk.leaderboard` - Default: true
+
+!!! command "activetime set &lt;player&gt; [time]"
+
+    Set the active time of a player.
+
+    This command does not update the leaderboard.
+
+    **Permissions**
+
+    * `solstice.afk.set` - Default: 3
