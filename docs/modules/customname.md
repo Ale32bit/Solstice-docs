@@ -42,9 +42,14 @@ To add a format for a group, add the following lines in the list (remember the o
 }
 ```
 
-###### Placeholder
+###### Special Placeholders
 
-Instead of using `%player:name%`, `${name}` is prefered because it respects the nickname of the player (if any).
+These placeholders are pre-processed before doing any formatting parse.
+This is to allow LuckPerms' prefix and suffix to correctly apply the formatting, including the name.
+
+* `${name}`: Display name of the player. Respects nicknames unlike `%player:name%`.
+* `${prefix}`: LuckPerms prefix. Empty by default.
+* `${suffix}`: LuckPerms suffix. Empty by default.
 
 ## Commands
 
